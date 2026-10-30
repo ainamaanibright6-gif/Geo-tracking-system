@@ -1,0 +1,192 @@
+import { CampusPOI, LocationPoint } from '../types/gis';
+
+// Mbarara University of Science and Technology (MUST) Main Campus POIs
+export const MUST_CAMPUS_POIS: CampusPOI[] = [
+  {
+    id: 'must-gate',
+    name: 'MUST Main Campus Gate',
+    category: 'administrative',
+    latitude: -0.61685,
+    longitude: 30.65682,
+    description: 'Main entrance security gate and visitor reception on Mbarara-Kabale road.',
+  },
+  {
+    id: 'must-admin',
+    name: 'University Administration Block',
+    category: 'administrative',
+    latitude: -0.61642,
+    longitude: 30.65738,
+    description: 'Vice Chancellor office, Academic Registrar, and Central GIS Laboratory.',
+  },
+  {
+    id: 'must-library',
+    name: 'MUST Main University Library',
+    category: 'library',
+    latitude: -0.61595,
+    longitude: 30.65765,
+    description: 'Central academic library, digital repository, and GIS resource archives.',
+  },
+  {
+    id: 'must-fast',
+    name: 'Faculty of Applied Sciences & Technology (FAST)',
+    category: 'academic',
+    latitude: -0.61548,
+    longitude: 30.65821,
+    description: 'Department of Computer Science, Engineering, and Geomatics/Surveying.',
+  },
+  {
+    id: 'must-sports',
+    name: 'University Sports Grounds & Pavilion',
+    category: 'facility',
+    latitude: -0.6175,
+    longitude: 30.6585,
+    description: 'Open athletics pitch used for spatial GNSS calibration and field tracking exercises.',
+  },
+  {
+    id: 'must-kihumuro',
+    name: 'Kihumuro Campus (Engineering Complex)',
+    category: 'academic',
+    latitude: -0.6508,
+    longitude: 30.6067,
+    description: 'MUST Kihumuro mega-campus for Engineering and Applied Sciences.',
+  },
+];
+
+// Realistic simulated walk route across MUST Main Campus for demonstration & offline testing
+export const MUST_CAMPUS_WALK_SIMULATION: Omit<LocationPoint, 'timestamp'>[] = [
+  {
+    latitude: -0.61685,
+    longitude: 30.65682,
+    accuracy: 4.8,
+    altitude: 1432.4,
+    altitudeAccuracy: 3.1,
+    heading: 45,
+    speed: 1.25, // ~4.5 km/h walking
+  },
+  {
+    latitude: -0.61672,
+    longitude: 30.65698,
+    accuracy: 5.2,
+    altitude: 1432.8,
+    altitudeAccuracy: 3.0,
+    heading: 52,
+    speed: 1.35,
+  },
+  {
+    latitude: -0.61658,
+    longitude: 30.65715,
+    accuracy: 4.5,
+    altitude: 1433.2,
+    altitudeAccuracy: 2.8,
+    heading: 50,
+    speed: 1.4,
+  },
+  {
+    latitude: -0.61642,
+    longitude: 30.65738, // At Admin Block
+    accuracy: 3.8,
+    altitude: 1433.5,
+    altitudeAccuracy: 2.5,
+    heading: 60,
+    speed: 0.9,
+  },
+  {
+    latitude: -0.61625,
+    longitude: 30.65751,
+    accuracy: 4.2,
+    altitude: 1434.0,
+    altitudeAccuracy: 2.7,
+    heading: 35,
+    speed: 1.3,
+  },
+  {
+    latitude: -0.61595,
+    longitude: 30.65765, // At University Library
+    accuracy: 6.5,
+    altitude: 1434.2,
+    altitudeAccuracy: 3.5,
+    heading: 25,
+    speed: 1.1,
+  },
+  {
+    latitude: -0.6157,
+    longitude: 30.65792,
+    accuracy: 4.0,
+    altitude: 1434.8,
+    altitudeAccuracy: 2.4,
+    heading: 48,
+    speed: 1.45,
+  },
+  {
+    latitude: -0.61548,
+    longitude: 30.65821, // At Faculty of Applied Sciences
+    accuracy: 4.9,
+    altitude: 1435.1,
+    altitudeAccuracy: 2.9,
+    heading: 70,
+    speed: 1.2,
+  },
+  {
+    latitude: -0.6158,
+    longitude: 30.6584,
+    accuracy: 5.5,
+    altitude: 1434.6,
+    altitudeAccuracy: 3.1,
+    heading: 160,
+    speed: 1.38,
+  },
+  {
+    latitude: -0.6163,
+    longitude: 30.65855,
+    accuracy: 4.1,
+    altitude: 1433.9,
+    altitudeAccuracy: 2.6,
+    heading: 175,
+    speed: 1.42,
+  },
+  {
+    latitude: -0.6169,
+    longitude: 30.6586, // Heading towards sports pavilion
+    accuracy: 3.6,
+    altitude: 1433.1,
+    altitudeAccuracy: 2.2,
+    heading: 180,
+    speed: 1.5,
+  },
+  {
+    latitude: -0.6175,
+    longitude: 30.6585, // At Sports Grounds
+    accuracy: 3.2,
+    altitude: 1432.5,
+    altitudeAccuracy: 2.0,
+    heading: 260,
+    speed: 1.3,
+  },
+  {
+    latitude: -0.61735,
+    longitude: 30.6578,
+    accuracy: 4.4,
+    altitude: 1432.6,
+    altitudeAccuracy: 2.8,
+    heading: 285,
+    speed: 1.35,
+  },
+  {
+    latitude: -0.6171,
+    longitude: 30.6572,
+    accuracy: 4.7,
+    altitude: 1432.5,
+    altitudeAccuracy: 2.9,
+    heading: 300,
+    speed: 1.2,
+  },
+  {
+    latitude: -0.61685,
+    longitude: 30.65682, // Closed loop back at Main Gate
+    accuracy: 4.5,
+    altitude: 1432.4,
+    altitudeAccuracy: 2.7,
+    heading: 320,
+    speed: 0.8,
+  },
+];
